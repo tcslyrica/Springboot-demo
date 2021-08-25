@@ -45,4 +45,9 @@ public class UserController {
 		userservice.save(user);
 		System.out.println(user.getFirstName());
 	}
+	
+	@DeleteMapping("/{id}")
+	private void deleteUser(@PathVariable("id") Integer id) {
+		userservice.deleteUser(id);
+	}
 }
